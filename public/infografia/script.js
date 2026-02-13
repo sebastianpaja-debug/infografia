@@ -1,6 +1,6 @@
 /* ============================================
    Infografia Academica — Gestion de Archivos
-   Script: carga de contenido + animacion fade-in
+   Script: animacion fade-in
    ============================================ */
 
 (function () {
@@ -36,29 +36,9 @@
     });
   }
 
-  function cargarContenido() {
-    var contenedor = document.getElementById("contenido-dinamico");
-
-    return fetch("contenido-infografia.html")
-      .then(function (resp) {
-        if (!resp.ok) {
-          throw new Error("No se pudo cargar contenido-infografia.html");
-        }
-        return resp.text();
-      })
-      .then(function (html) {
-        contenedor.innerHTML = html;
-        initFadeIn();
-      })
-      .catch(function (error) {
-        console.error(error);
-        contenedor.innerHTML = "<p class=\"cargando\">Error al cargar la infografía.</p>";
-      });
-  }
-
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", cargarContenido);
+    document.addEventListener("DOMContentLoaded", initFadeIn);
   } else {
-    cargarContenido();
+    initFadeIn();
   }
 })();
