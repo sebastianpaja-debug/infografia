@@ -658,3 +658,10 @@ body {
     gap: 10px;
   }
 }
+
+.cargando {
+  text-align: center;
+  color: #f4f7ff;
+  font-weight: 600;
+  padding: 3rem 1rem;
+}

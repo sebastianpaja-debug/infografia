@@ -1,0 +1,316 @@
+
+<section class="seccion header-section">
+  <div class="badge">Infografia Academica</div>
+  <h1>Gestion de Archivos en Sistemas Operativos</h1>
+  <p class="subtitulo">Sistemas Operativos &mdash; Ingenieria en Sistemas</p>
+  <hr class="divider" />
+  <div class="header-decoracion">
+    <div class="header-stat">
+      <span class="stat-num">7</span>
+      <span class="stat-label">Secciones</span>
+    </div>
+    <div class="header-stat">
+      <span class="stat-num">5</span>
+      <span class="stat-label">Funciones</span>
+    </div>
+    <div class="header-stat">
+      <span class="stat-num">6</span>
+      <span class="stat-label">Tipos de FS</span>
+    </div>
+    <div class="header-stat">
+      <span class="stat-num">4</span>
+      <span class="stat-label">Metodos</span>
+    </div>
+  </div>
+</section>
+
+
+<section class="seccion">
+  <div class="definicion-box">
+    <h2>Que es la gestion de archivos?</h2>
+    <p>
+      Es el conjunto de mecanismos y estructuras que el sistema operativo utiliza para
+      organizar, almacenar, recuperar y proteger la informacion en dispositivos de
+      almacenamiento secundario. Actua como intermediario entre el usuario y el hardware,
+      proporcionando una vision logica y coherente de los datos.
+    </p>
+  </div>
+</section>
+
+
+<section class="seccion">
+  <h2 class="seccion-titulo">
+    <span class="titulo-icono"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></span>
+    Funciones del Sistema Operativo
+  </h2>
+  <p class="seccion-desc">Mecanismos clave que el SO ofrece para administrar archivos de forma eficiente y segura.</p>
+  <div class="funciones-grid">
+
+    <div class="funcion-card">
+      <div class="icono">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6C4.9 2 4 2.9 4 4v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM11 17h-1v-4H9v-1h3v1h-1v4zm4 0h-3v-1h1v-3h-1v-1h2v4h1v1z"/></svg>
+      </div>
+      <h3>Creacion y eliminacion</h3>
+      <p>Permite crear archivos nuevos asignando espacio en disco y eliminarlos liberando los bloques correspondientes.</p>
+    </div>
+
+    <div class="funcion-card">
+      <div class="icono">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+      </div>
+      <h3>Organizacion en directorios</h3>
+      <p>Estructura los archivos en carpetas jerarquicas que facilitan la navegacion y la clasificacion logica.</p>
+    </div>
+
+    <div class="funcion-card">
+      <div class="icono">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm4 10.1V18h-2v-1.9c-.58-.35-1-.96-1-1.6 0-1.1.9-2 2-2s2 .9 2 2c0 .64-.42 1.25-1 1.6z"/></svg>
+      </div>
+      <h3>Control de acceso</h3>
+      <p>Gestiona permisos de lectura, escritura y ejecucion mediante listas de control (ACL) o esquemas propietario-grupo.</p>
+    </div>
+
+    <div class="funcion-card">
+      <div class="icono">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 3.79 2 6v12c0 2.21 4.48 4 10 4s10-1.79 10-4V6c0-2.21-4.48-4-10-4zm0 2c4.42 0 8 1.34 8 3s-3.58 3-8 3-8-1.34-8-3 3.58-3 8-3zM4 18V15.87c1.68 1.07 4.61 1.8 8 1.8s6.32-.73 8-1.8V18c0 1.66-3.58 3-8 3s-8-1.34-8-3zm16-4c0 1.66-3.58 3-8 3s-8-1.34-8-3v-2.13c1.68 1.07 4.61 1.8 8 1.8s6.32-.73 8-1.8V14zm0-4c0 1.66-3.58 3-8 3s-8-1.34-8-3V7.87c1.68 1.07 4.61 1.8 8 1.8s6.32-.73 8-1.8V10z"/></svg>
+      </div>
+      <h3>Respaldo y recuperacion</h3>
+      <p>Mecanismos de copia de seguridad y journaling que aseguran la integridad ante fallos del sistema.</p>
+    </div>
+
+    <div class="funcion-card">
+      <div class="icono">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 14H7v-4h4v4zm0-6H7V7h4v4zm6 6h-4v-4h4v4zm0-6h-4V7h4v4z"/></svg>
+      </div>
+      <h3>Asignacion de espacio</h3>
+      <p>Administra los bloques fisicos del disco, asignandolos y liberandolos segun las necesidades de cada archivo.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="seccion">
+  <h2 class="seccion-titulo">
+    <span class="titulo-icono"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg></span>
+    Estructura del Sistema de Archivos
+  </h2>
+  <p class="seccion-desc">Componentes internos que conforman la organizacion fisica de un volumen de almacenamiento.</p>
+  <div class="estructura-grid">
+
+    <div class="estructura-item">
+      <span class="numero">01</span>
+      <h3>Bloque de arranque</h3>
+      <p>Contiene el codigo necesario para iniciar el sistema operativo desde el volumen.</p>
+    </div>
+
+    <div class="estructura-item">
+      <span class="numero">02</span>
+      <h3>Superbloque</h3>
+      <p>Almacena metadatos globales: tamano del volumen, cantidad de bloques libres y ocupados.</p>
+    </div>
+
+    <div class="estructura-item">
+      <span class="numero">03</span>
+      <h3>Tabla de i-nodos</h3>
+      <p>Cada i-nodo describe un archivo: tamano, permisos, marcas de tiempo y punteros a bloques de datos.</p>
+    </div>
+
+    <div class="estructura-item">
+      <span class="numero">04</span>
+      <h3>Bloques de datos</h3>
+      <p>Region donde se almacena el contenido real de los archivos y directorios.</p>
+    </div>
+
+    <div class="estructura-item">
+      <span class="numero">05</span>
+      <h3>Mapa de bits / Lista libre</h3>
+      <p>Estructura que indica que bloques estan disponibles para nuevas asignaciones.</p>
+    </div>
+
+    <div class="estructura-item">
+      <span class="numero">06</span>
+      <h3>Directorio raiz</h3>
+      <p>Punto de entrada de la jerarquia de archivos; vincula nombres con sus i-nodos.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="seccion">
+  <h2 class="seccion-titulo">
+    <span class="titulo-icono"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg></span>
+    Metodos de Organizacion
+  </h2>
+  <p class="seccion-desc">Estrategias que el SO emplea para distribuir los bloques de un archivo en el disco.</p>
+  <div class="metodos-container">
+
+    <div class="metodo-block">
+      <h3>Asignacion contigua</h3>
+      <p>Los bloques del archivo se almacenan de forma consecutiva. Ofrece acceso rapido, pero genera fragmentacion externa al eliminar archivos.</p>
+      <div class="diagrama-wrapper">
+        <div class="diagrama">
+          <span class="bloque contiguo">A1</span>
+          <span class="bloque contiguo">A2</span>
+          <span class="bloque contiguo">A3</span>
+          <span class="bloque contiguo">A4</span>
+          <span class="bloque vacio">&mdash;</span>
+          <span class="bloque vacio">&mdash;</span>
+          <span class="bloque contiguo">B1</span>
+          <span class="bloque contiguo">B2</span>
+        </div>
+        <p class="diagrama-label">Bloques contiguos del archivo A, espacio libre, bloques del archivo B.</p>
+      </div>
+    </div>
+
+    <div class="metodo-block">
+      <h3>Asignacion enlazada</h3>
+      <p>Cada bloque contiene un puntero al siguiente, formando una lista enlazada. Elimina la fragmentacion externa, pero el acceso secuencial es mas lento.</p>
+      <div class="diagrama-wrapper">
+        <div class="diagrama">
+          <span class="bloque enlazado">A1</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque vacio">&mdash;</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque enlazado">A2</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque enlazado">A3</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque vacio">&mdash;</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque enlazado">A4</span>
+        </div>
+        <p class="diagrama-label">Punteros enlazan bloques no contiguos del archivo A.</p>
+      </div>
+    </div>
+
+    <div class="metodo-block">
+      <h3>Asignacion indexada</h3>
+      <p>Un bloque indice contiene punteros a todos los bloques de datos del archivo. Combina acceso directo con flexibilidad de ubicacion.</p>
+      <div class="diagrama-wrapper">
+        <div class="diagrama">
+          <span class="bloque indexado-tabla">IDX</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque indexado-dato">D1</span>
+          <span class="bloque indexado-dato">D2</span>
+          <span class="bloque indexado-dato">D3</span>
+          <span class="bloque indexado-dato">D4</span>
+        </div>
+        <p class="diagrama-label">El bloque indice (IDX) apunta a los bloques de datos D1-D4.</p>
+      </div>
+    </div>
+
+    <div class="metodo-block">
+      <h3>Tabla de asignacion de archivos (FAT)</h3>
+      <p>Una tabla centralizada al inicio del volumen registra la cadena de bloques de cada archivo. Usada en FAT12, FAT16 y FAT32.</p>
+      <div class="diagrama-wrapper">
+        <div class="diagrama">
+          <span class="bloque indexado-tabla">FAT</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque enlazado">C1</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque enlazado">C2</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque enlazado">C3</span>
+        </div>
+        <p class="diagrama-label">La tabla FAT contiene las cadenas de bloques para cada archivo.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="seccion">
+  <h2 class="seccion-titulo">
+    <span class="titulo-icono"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff"><path d="M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z"/></svg></span>
+    Tipos de Sistemas de Archivos
+  </h2>
+  <p class="seccion-desc">Principales implementaciones utilizadas en sistemas operativos modernos.</p>
+  <div class="tipos-grid">
+
+    <div class="tipo-card">
+      <div class="tipo-icono"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#1f2a44"><path d="M20 6H12L10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 10H6v-2h8v2zm4-4H6v-2h12v2z"/></svg></div>
+      <div class="tipo-nombre">NTFS</div>
+      <p>Journaling, permisos ACL y soporte de archivos grandes. Predeterminado en Windows.</p>
+    </div>
+
+    <div class="tipo-card">
+      <div class="tipo-icono"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#1f2a44"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+      <div class="tipo-nombre">ext4</div>
+      <p>Journaling, extents y preasignación. Estándar en la mayoría de distribuciones Linux.</p>
+    </div>
+
+    <div class="tipo-card">
+      <div class="tipo-icono"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#1f2a44"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg></div>
+      <div class="tipo-nombre">APFS</div>
+      <p>Optimizado para SSD, cifrado nativo y snapshots. Usado en macOS e iOS modernos.</p>
+    </div>
+
+    <div class="tipo-card">
+      <div class="tipo-icono"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#1f2a44"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z"/></svg></div>
+      <div class="tipo-nombre">FAT32</div>
+      <p>Máxima compatibilidad entre sistemas operativos. Límite de 4 GB por archivo.</p>
+    </div>
+
+    <div class="tipo-card">
+      <div class="tipo-icono"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#1f2a44"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div>
+      <div class="tipo-nombre">XFS</div>
+      <p>Alto rendimiento con archivos grandes y paralelismo de E/S. Usado en servidores Linux.</p>
+    </div>
+
+    <div class="tipo-card">
+      <div class="tipo-icono"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#1f2a44"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg></div>
+      <div class="tipo-nombre">ZFS</div>
+      <p>Integridad con checksums, RAID integrado y compresión. Orientado a almacenamiento empresarial.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="seccion">
+  <h2 class="seccion-titulo">
+    <span class="titulo-icono"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg></span>
+    Componente Etico y Profesional
+  </h2>
+  <p class="seccion-desc">Responsabilidades que todo ingeniero debe considerar al disenar e implementar sistemas de archivos.</p>
+  <div class="etico-container">
+
+    <div class="etico-item">
+      <div class="etico-icono">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" stroke="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3.5-3.5 1.41-1.41L11 12.17l5.09-5.09 1.41 1.41L11 15z"/></svg>
+      </div>
+      <div>
+        <h3>Confidencialidad de los datos</h3>
+        <p>El ingeniero debe garantizar que los permisos y las politicas de acceso protejan la informacion sensible de accesos no autorizados.</p>
+      </div>
+    </div>
+
+    <div class="etico-item">
+      <div class="etico-icono">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" stroke="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <div>
+        <h3>Integridad y respaldo responsable</h3>
+        <p>Implementar estrategias de respaldo y journaling no es solo tecnico, sino una responsabilidad etica ante la perdida potencial de datos criticos.</p>
+      </div>
+    </div>
+
+    <div class="etico-item">
+      <div class="etico-icono">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" stroke="none"><path d="M12 5.9a2.1 2.1 0 110 4.2 2.1 2.1 0 010-4.2m0-2.9a5 5 0 100 10 5 5 0 000-10zM12 14c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4z"/></svg>
+      </div>
+      <div>
+        <h3>Responsabilidad del ingeniero</h3>
+        <p>Disenar sistemas de archivos robustos implica considerar el impacto social: disponibilidad del servicio, privacidad del usuario y cumplimiento normativo.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <footer class="footer-section">
+      <span>Gestion de Archivos en Sistemas Operativos</span> &mdash; Infografia Academica &mdash; Ingenieria en Sistemas
+    </footer>
