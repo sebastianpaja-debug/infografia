@@ -34,13 +34,19 @@ body {
 /* --- Secciones --- */
 .seccion {
   padding: 44px 36px;
-  opacity: 0;
-  transform: translateY(24px);
+  opacity: 1;
+  transform: none;
   transition: opacity 0.6s ease, transform 0.6s ease;
   position: relative;
 }
 
-.seccion.visible {
+/* Solo ocultar para animar cuando JS está activo */
+.js-enabled .seccion {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.js-enabled .seccion.visible {
   opacity: 1;
   transform: translateY(0);
 }
