@@ -1,0 +1,82 @@
+<section class="seccion">
+  <h2 class="seccion-titulo">
+    <span class="titulo-icono"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg></span>
+    Metodos de Organizacion
+  </h2>
+  <p class="seccion-desc">Estrategias que el SO emplea para distribuir los bloques de un archivo en el disco.</p>
+  <div class="metodos-container">
+
+    <div class="metodo-block">
+      <h3>Asignacion contigua</h3>
+      <p>Los bloques del archivo se almacenan de forma consecutiva. Ofrece acceso rapido, pero genera fragmentacion externa al eliminar archivos.</p>
+      <div class="diagrama-wrapper">
+        <div class="diagrama">
+          <span class="bloque contiguo">A1</span>
+          <span class="bloque contiguo">A2</span>
+          <span class="bloque contiguo">A3</span>
+          <span class="bloque contiguo">A4</span>
+          <span class="bloque vacio">&mdash;</span>
+          <span class="bloque vacio">&mdash;</span>
+          <span class="bloque contiguo">B1</span>
+          <span class="bloque contiguo">B2</span>
+        </div>
+        <p class="diagrama-label">Bloques contiguos del archivo A, espacio libre, bloques del archivo B.</p>
+      </div>
+    </div>
+
+    <div class="metodo-block">
+      <h3>Asignacion enlazada</h3>
+      <p>Cada bloque contiene un puntero al siguiente, formando una lista enlazada. Elimina la fragmentacion externa, pero el acceso secuencial es mas lento.</p>
+      <div class="diagrama-wrapper">
+        <div class="diagrama">
+          <span class="bloque enlazado">A1</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque vacio">&mdash;</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque enlazado">A2</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque enlazado">A3</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque vacio">&mdash;</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque enlazado">A4</span>
+        </div>
+        <p class="diagrama-label">Punteros enlazan bloques no contiguos del archivo A.</p>
+      </div>
+    </div>
+
+    <div class="metodo-block">
+      <h3>Asignacion indexada</h3>
+      <p>Un bloque indice contiene punteros a todos los bloques de datos del archivo. Combina acceso directo con flexibilidad de ubicacion.</p>
+      <div class="diagrama-wrapper">
+        <div class="diagrama">
+          <span class="bloque indexado-tabla">IDX</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque indexado-dato">D1</span>
+          <span class="bloque indexado-dato">D2</span>
+          <span class="bloque indexado-dato">D3</span>
+          <span class="bloque indexado-dato">D4</span>
+        </div>
+        <p class="diagrama-label">El bloque indice (IDX) apunta a los bloques de datos D1-D4.</p>
+      </div>
+    </div>
+
+    <div class="metodo-block">
+      <h3>Tabla de asignacion de archivos (FAT)</h3>
+      <p>Una tabla centralizada al inicio del volumen registra la cadena de bloques de cada archivo. Usada en FAT12, FAT16 y FAT32.</p>
+      <div class="diagrama-wrapper">
+        <div class="diagrama">
+          <span class="bloque indexado-tabla">FAT</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque enlazado">C1</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque enlazado">C2</span>
+          <span class="flecha">&#8594;</span>
+          <span class="bloque enlazado">C3</span>
+        </div>
+        <p class="diagrama-label">La tabla FAT contiene las cadenas de bloques para cada archivo.</p>
+      </div>
+    </div>
+
+  </div>
+</section>

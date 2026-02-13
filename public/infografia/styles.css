@@ -1,0 +1,660 @@
+/* ============================================
+   Infografia Academica — Gestion de Archivos
+   Estilos principales — UI/UX mejorado
+   ============================================ */
+
+/* --- Reset y Base --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Sans 3", "Source Sans Pro", sans-serif;
+  background-color: #eef1f5;
+  color: #333333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Contenedor principal --- */
+.infografia {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 0 40px;
+}
+
+/* --- Secciones --- */
+.seccion {
+  padding: 44px 36px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  position: relative;
+}
+
+.seccion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Alternar fondos para eliminar espacio blanco */
+.seccion:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.seccion:nth-child(even) {
+  background-color: #f5f7fa;
+}
+
+/* Borde lateral decorativo en secciones pares */
+.seccion:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 4px;
+  background-color: #1f2a44;
+  border-radius: 0 2px 2px 0;
+}
+
+/* Separador horizontal sutil entre secciones */
+.seccion + .seccion {
+  border-top: 1px solid #dde1e8;
+}
+
+/* ============================================
+   SECCION 1 — Encabezado
+   ============================================ */
+.header-section {
+  text-align: center;
+  padding: 60px 28px 48px;
+  background: linear-gradient(170deg, #1f2a44 0%, #2c3e5a 100%) !important;
+  color: #ffffff;
+  border-radius: 0 0 0 0;
+}
+
+.header-section .badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.header-section h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.header-section .subtitulo {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.65);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background-color: rgba(255,255,255,0.5);
+  margin: 24px auto 0;
+  border: none;
+  border-radius: 2px;
+}
+
+.header-section .header-decoracion {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.header-section .header-stat {
+  text-align: center;
+}
+
+.header-section .header-stat .stat-num {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.header-section .header-stat .stat-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.55);
+}
+
+/* ============================================
+   SECCION 2 — Definicion
+   ============================================ */
+.definicion-box {
+  background-color: #ffffff;
+  border-left: 4px solid #1f2a44;
+  padding: 28px 28px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.definicion-box::after {
+  content: "\201C";
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 4rem;
+  color: #e5e7eb;
+  line-height: 1;
+}
+
+.definicion-box h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.35rem;
+  color: #1f2a44;
+  margin-bottom: 10px;
+}
+
+.definicion-box p {
+  font-size: 0.98rem;
+  color: #444444;
+  line-height: 1.7;
+  max-width: 90%;
+}
+
+/* ============================================
+   SECCION 3 — Funciones del SO
+   ============================================ */
+.seccion-titulo {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.4rem;
+  color: #1f2a44;
+  margin-bottom: 8px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #1f2a44;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.seccion-titulo .titulo-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #1f2a44;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.seccion-titulo .titulo-icono svg {
+  width: 16px;
+  height: 16px;
+}
+
+.seccion-desc {
+  font-size: 0.88rem;
+  color: #6b7280;
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+.funciones-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.funcion-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.funcion-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #1f2a44;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.funcion-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+  transform: translateY(-2px);
+}
+
+.funcion-card:hover::after {
+  opacity: 1;
+}
+
+.funcion-card .icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #1f2a44;
+  color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  font-size: 1.1rem;
+}
+
+.funcion-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2a44;
+  margin-bottom: 6px;
+}
+
+.funcion-card p {
+  font-size: 0.86rem;
+  color: #555555;
+  line-height: 1.55;
+}
+
+/* Ultima tarjeta centrada si es impar */
+.funciones-grid .funcion-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: 50%;
+  justify-self: center;
+}
+
+/* ============================================
+   SECCION 4 — Estructura del Sistema de Archivos
+   ============================================ */
+.estructura-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.estructura-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 24px 22px;
+  border: 1px solid #e5e7eb;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+
+.estructura-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #1f2a44;
+}
+
+.estructura-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+  transform: translateY(-2px);
+}
+
+.estructura-item .numero {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #eef1f5;
+  line-height: 1;
+}
+
+.estructura-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2a44;
+  margin-bottom: 6px;
+  margin-top: 4px;
+}
+
+.estructura-item p {
+  font-size: 0.86rem;
+  color: #555555;
+  line-height: 1.55;
+}
+
+/* ============================================
+   SECCION 5 — Metodos de Organizacion
+   ============================================ */
+.metodos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.metodo-block {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 26px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.metodo-block::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #1f2a44;
+  border-radius: 4px 0 0 4px;
+}
+
+.metodo-block h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1f2a44;
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+.metodo-block > p {
+  font-size: 0.88rem;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 14px;
+  padding-left: 4px;
+}
+
+/* Diagramas de bloques CSS */
+.diagrama-wrapper {
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  padding: 16px 18px 12px;
+  border: 1px solid #eef1f5;
+}
+
+.diagrama {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.bloque {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 34px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+
+.bloque.contiguo {
+  background-color: #1f2a44;
+}
+
+.bloque.enlazado {
+  background-color: #3b6b8a;
+}
+
+.bloque.indexado-tabla {
+  background-color: #1f2a44;
+}
+
+.bloque.indexado-dato {
+  background-color: #5a8fa8;
+}
+
+.bloque.vacio {
+  background-color: #d1d5db;
+  color: #888888;
+}
+
+.flecha {
+  font-size: 1rem;
+  color: #9ca3af;
+  margin: 0 2px;
+}
+
+.diagrama-label {
+  font-size: 0.72rem;
+  color: #888888;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* ============================================
+   SECCION 6 — Tipos de Sistemas de Archivos
+   ============================================ */
+.tipos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+
+.tipo-card {
+  text-align: center;
+  padding: 24px 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tipo-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: #1f2a44;
+  border-radius: 0 0 3px 3px;
+}
+
+.tipo-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+  transform: translateY(-2px);
+}
+
+.tipo-card .tipo-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #eef1f5;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.tipo-card .tipo-icono svg {
+  width: 20px;
+  height: 20px;
+}
+
+.tipo-card .tipo-nombre {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2a44;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.tipo-card p {
+  font-size: 0.82rem;
+  color: #555555;
+  line-height: 1.55;
+}
+
+/* ============================================
+   SECCION 7 — Componente Etico
+   ============================================ */
+.etico-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.etico-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 22px 24px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease;
+}
+
+.etico-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+}
+
+.etico-item .etico-icono {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background-color: #1f2a44;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.etico-item .etico-icono svg {
+  width: 22px;
+  height: 22px;
+}
+
+.etico-item h3 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #1f2a44;
+  margin-bottom: 4px;
+}
+
+.etico-item p {
+  font-size: 0.86rem;
+  color: #555555;
+  line-height: 1.55;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer-section {
+  text-align: center;
+  padding: 36px 28px;
+  background-color: #1f2a44;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.footer-section span {
+  color: rgba(255,255,255,0.75);
+  font-weight: 600;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 680px) {
+  .seccion {
+    padding: 32px 20px;
+  }
+
+  .header-section {
+    padding: 44px 20px 36px;
+  }
+
+  .header-section h1 {
+    font-size: 1.7rem;
+  }
+
+  .header-section .header-decoracion {
+    gap: 16px;
+  }
+
+  .funciones-grid,
+  .estructura-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .funciones-grid .funcion-card:last-child:nth-child(odd) {
+    max-width: 100%;
+  }
+
+  .tipos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metodo-block {
+    padding: 20px 18px;
+  }
+
+  .seccion:nth-child(even)::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-section h1 {
+    font-size: 1.45rem;
+  }
+
+  .seccion-titulo {
+    font-size: 1.2rem;
+  }
+
+  .header-section .header-decoracion {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
